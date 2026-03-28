@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Commands</title>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+:root {
+    color-scheme: dark;
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1d2330;
+    --text: #f2f4f8;
+    --muted: #b4bdcc;
+    --accent: #9147ff;
+    --border: #2a3140;
+}
 .command-toolbar,
 .admin-toolbar,
 .passport-toolbar,
@@ -146,10 +157,28 @@
     }
 }
 </style>
-</head><body style="font-family:Segoe UI,Helvetica,Arial,sans-serif;margin:0;background:#0b1220;color:#e6eef9;">
-<section class="card dashboard-module dashboard-commands-module">
-<h2 style="margin-top:0;color:#ffffff;">Commands</h2>
-<p style="margin:0 0 8px 0;color:#9fb0c8;font-size:0.9rem">Last updated: 2026-03-28 21:34:41 UTC</p>
+</head><body>
+
+.dashboard-commands-module {
+    margin-bottom: 1.5rem;
+    max-width: 1100px;
+    margin: 12px auto;
+    background: var(--panel);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 16px;
+}
+<p style="margin:0 0 8px 0;color:#9fb0c8;font-size:0.9rem">Last updated: 2026-03-28 21:43:18 UTC</p>
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, 'Segoe UI', Arial, sans-serif;
+}
 <div class="dashboard-table-shell">
 <table><thead><tr><th>Name</th><th>Summary</th><th>Cooldown</th></tr></thead><tbody>
 <tr><td><code>!commands</code></td><td>Lists enabled chat commands.</td><td>1 s</td></tr>
