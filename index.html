@@ -5,24 +5,151 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Commands</title>
 <style>
-body{font-family:Segoe UI,Helvetica,Arial,sans-serif;padding:20px;color:#222;margin:0;background:#fff}
-.dashboard-commands-module{margin-bottom:1.5rem;max-width:1100px;margin:12px auto}
-.dashboard-table-shell{overflow:auto}
-.command-toolbar,.command-editor-panel,.command-editor-form{margin-bottom:1rem}
-.command-editor-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1rem}
-.command-editor-actions-left,.command-editor-actions-right{display:flex;align-items:center;gap:0.75rem}
-.command-edit-button{white-space:nowrap}
-table{border-collapse:collapse;width:100%;margin-top:12px;font-size:0.95rem}
-th,td{border:1px solid #e6e6e6;padding:8px;text-align:left;vertical-align:top}
-th{background:#f7f7f8;color:#222;font-weight:600}
-code{font-family:SFMono-Regular,Menlo,Monaco,Roboto Mono,Segoe UI Mono,monospace;background:#f3f4f6;padding:2px 6px;border-radius:4px}
-@media (max-width:720px){.command-editor-actions{align-items:stretch}.command-editor-actions-left,.command-editor-actions-right{width:100%;flex-wrap:wrap}.command-editor-actions-right{justify-content:flex-start;margin-left:0}}
-@media (max-width:1240px){.dashboard-commands-module{max-width:100%}}
+.command-toolbar,
+.admin-toolbar,
+.passport-toolbar,
+.command-editor-panel,
+.command-editor-form,
+.admin-editor-panel,
+.admin-editor-form,
+.passport-editor-panel,
+.passport-editor-form {
+    margin-bottom: 1rem;
+}
+
+.command-editor-actions,
+.admin-editor-actions,
+.passport-editor-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.command-editor-actions-left,
+.command-editor-actions-right,
+.admin-editor-actions-left,
+.passport-editor-actions-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.command-editor-actions-right {
+    margin-left: auto;
+}
+
+.command-edit-button {
+    white-space: nowrap;
+}
+
+.passport-edit-button {
+    white-space: nowrap;
+}
+
+.passport-section textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+.llm-status-card .big {
+    font-size: 1.4rem;
+}
+
+.llm-status-meta {
+    margin-top: 0.45rem;
+    color: var(--muted);
+    word-break: break-word;
+}
+
+.dashboard-commands-module {
+    margin-bottom: 1.5rem;
+    max-width: 1100px;
+    margin: 12px auto;
+    background: #0f1724;
+    color: #e6eef9;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.dashboard-table-shell {
+    overflow: auto;
+    margin-top: 8px;
+}
+
+.dashboard-commands-module table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    background: transparent;
+}
+
+.dashboard-commands-module th, .dashboard-commands-module td {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.dashboard-commands-module th {
+    background: transparent;
+    color: #cbd5e1;
+    font-weight: 600;
+    text-transform: none;
+    font-size: 0.9rem;
+}
+
+.dashboard-commands-module td {
+    color: #e6eef9;
+}
+
+.dashboard-commands-module code {
+    font-family: SFMono-Regular,Menlo,Monaco,Roboto Mono,Segoe UI Mono,monospace;
+    background: rgba(255,255,255,0.03);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: #e6eef9;
+}
+
+@media (max-width: 720px) {
+    .command-editor-actions,
+    .admin-editor-actions,
+    .passport-editor-actions {
+        align-items: stretch;
+    }
+
+    .command-editor-actions-left,
+    .command-editor-actions-right,
+    .admin-editor-actions-left,
+    .passport-editor-actions-left {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .command-editor-actions-right {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1240px) {
+    .dashboard-commands-module {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 980px) {
+    .dashboard-commands-module table {
+        font-size: 0.9rem;
+    }
+}
 </style>
 </head><body>
 <section class="card dashboard-module dashboard-commands-module">
 <h2>Commands</h2>
-<p style="margin:0 0 8px 0;color:#666;font-size:0.9rem">Last updated: 2026-03-28 21:27:41 UTC</p>
+<p style="margin:0 0 8px 0;color:#666;font-size:0.9rem">Last updated: 2026-03-28 21:31:52 UTC</p>
 <div class="dashboard-table-shell">
 <table><thead><tr><th>Name</th><th>Summary</th><th>Cooldown</th></tr></thead><tbody>
 <tr><td><code>!commands</code></td><td>Lists enabled chat commands.</td><td>1 s</td></tr>
