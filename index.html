@@ -6,7 +6,7 @@
 <title>Commands</title>
 <style>
 body{font-family:Segoe UI,Helvetica,Arial,sans-serif;padding:20px;color:#222;margin:0;background:#fff}
-.dashboard-commands-module{margin-bottom:1.5rem}
+.dashboard-commands-module{margin-bottom:1.5rem;max-width:1100px;margin:12px auto}
 .dashboard-table-shell{overflow:auto}
 .command-toolbar,.command-editor-panel,.command-editor-form{margin-bottom:1rem}
 .command-editor-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:1rem}
@@ -20,28 +20,33 @@ code{font-family:SFMono-Regular,Menlo,Monaco,Roboto Mono,Segoe UI Mono,monospace
 @media (max-width:1240px){.dashboard-commands-module{max-width:100%}}
 </style>
 </head><body>
-<h1>Available Commands</h1>
-<p>Last updated: 2026-03-28 19:47:08 UTC</p>
-<table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody>
-<tr><td><code>!commands</code></td><td>Lists enabled chat commands.</td></tr>
-<tr><td><code>!convert</code></td><td>Converts between common units. Usage: !convert &lt;value&gt; &lt;from&gt; &lt;to&gt;</td></tr>
-<tr><td><code>!fish</code></td><td>Cast your line.</td></tr>
-<tr><td><code>!fishleaderboard</code></td><td>Shows top fishing players. Usage: !fishleaderboard [count]</td></tr>
-<tr><td><code>!fishpoints</code></td><td>Shows your fishing points.</td></tr>
-<tr><td><code>!fishslap</code></td><td>Slaps someone with a random fish.</td></tr>
-<tr><td><code>!games</code></td><td>Lists configured games and their starting points.</td></tr>
-<tr><td><code>!heal</code></td><td>Heals a chatter</td></tr>
-<tr><td><code>!ipinzibot</code></td><td>Generates a one-line local AI response for an explicit prompt.</td></tr>
-<tr><td><code>!ipiraid</code></td><td></td></tr>
-<tr><td><code>!janey</code></td><td>Tell us about Jane</td></tr>
-<tr><td><code>!myfish</code></td><td>Lists the fish you&#39;ve caught.</td></tr>
-<tr><td><code>!passport</code></td><td>Shows a recent passport summary for the current or named channel.</td></tr>
-<tr><td><code>!points</code></td><td>Shows your saved points for a specific game.</td></tr>
-<tr><td><code>!postcard</code></td><td>Writes a playful postcard from the current or named channel.</td></tr>
-<tr><td><code>!pp</code></td><td>Tells the user their pp size.</td></tr>
-<tr><td><code>!sayhello</code></td><td>The bot will introduce itself</td></tr>
-<tr><td><code>!slap</code></td><td>Slaps someone with a random style of slap.</td></tr>
-<tr><td><code>!time</code></td><td>Gets the time from any place in the world</td></tr>
-<tr><td><code>!wherewasi</code></td><td>Lists the bot&#39;s most recent channel visits.</td></tr>
+<section class="card dashboard-module dashboard-commands-module">
+<h2>Commands</h2>
+<p style="margin:0 0 8px 0;color:#666;font-size:0.9rem">Last updated: 2026-03-28 20:32:43 UTC</p>
+<div class="dashboard-table-shell">
+<table><thead><tr><th>Name</th><th>Source</th><th>Template</th><th>Summary</th><th>Enabled</th><th>Admin only</th><th>Cooldown</th><th>Last triggered</th><th></th></tr></thead><tbody>
+<tr><td><code>!commands</code></td><td>code</td><td>!ping - pong
+!hello - Greets the chatter</td><td>Lists enabled chat commands.</td><td>Yes</td><td>No</td><td>1 s</td><td>—</td><td></td></tr>
+<tr><td><code>!convert</code></td><td>code</td><td>1 m = 3.2808 ft</td><td>Converts between common units. Usage: !convert &lt;value&gt; &lt;from&gt; &lt;to&gt;</td><td>Yes</td><td>No</td><td>1 s</td><td>—</td><td></td></tr>
+<tr><td><code>!fish</code></td><td>code</td><td>You cast your line...</td><td>Cast your line.</td><td>Yes</td><td>No</td><td>1 s</td><td>—</td><td></td></tr>
+<tr><td><code>!fishleaderboard</code></td><td>code</td><td>Top fishing: alice 120, bob 100</td><td>Shows top fishing players. Usage: !fishleaderboard [count]</td><td>Yes</td><td>No</td><td>5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!fishpoints</code></td><td>code</td><td>You have 42 points in fishing.</td><td>Shows your fishing points.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!fishslap</code></td><td>code</td><td>someuser slaps anotheruser with a large salmon!</td><td>Slaps someone with a random fish.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!games</code></td><td>code</td><td>Configured games: marbles (start 10), chess (start 0).</td><td>Lists configured games and their starting points.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!heal</code></td><td>database</td><td>{displayname} attempted to heal {arg:0} with healing hands... {random:they feel a little better|but nothing happened}.</td><td>Heals a chatter</td><td>Yes</td><td>No</td><td>1 s</td><td>26/03/2026 20:16</td><td></td></tr>
+<tr><td><code>!ipinzibot</code></td><td>code</td><td>Tell me something playful about chat energy.</td><td>Generates a one-line local AI response for an explicit prompt.</td><td>Yes</td><td>No</td><td>2 s</td><td>—</td><td></td></tr>
+<tr><td><code>!ipiraid</code></td><td>database</td><td>IPI RAID ipinziGirraid IPI RAID ipinziGirraid IPI RAID ipinziGirraid IPI RAID ipinziGirraid IPI RAID ipinziGirraid IPI RAID ipinziGirraid IPI RAID ipinziGirraid</td><td></td><td>Yes</td><td>No</td><td>1 s</td><td>—</td><td></td></tr>
+<tr><td><code>!janey</code></td><td>database</td><td>Jane is the most wonderful and amazing person I know!</td><td>Tell us about Jane</td><td>Yes</td><td>No</td><td>1 s</td><td>24/03/2026 22:40</td><td></td></tr>
+<tr><td><code>!myfish</code></td><td>code</td><td>You have: small fish x3, big fish x1</td><td>Lists the fish you&#39;ve caught.</td><td>Yes</td><td>No</td><td>1 s</td><td>—</td><td></td></tr>
+<tr><td><code>!passport</code></td><td>code</td><td>Passport for #somechannel: vibe lively, 24 messages from 7 chatters.</td><td>Shows a recent passport summary for the current or named channel.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!points</code></td><td>code</td><td>You have 42 points in marbles.</td><td>Shows your saved points for a specific game.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!postcard</code></td><td>code</td><td>Postcard from #somechannel: lively vibes and everyone keeps saying clutch.</td><td>Writes a playful postcard from the current or named channel.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!pp</code></td><td>database</td><td>{displayname}&#39;s pp size is {random:1..20} inches</td><td>Tells the user their pp size.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>28/03/2026 01:30</td><td></td></tr>
+<tr><td><code>!sayhello</code></td><td>database</td><td>Hello {channel}! I’m Ipinzibot, ipinzi’s trusty sidekick, part chat companion, part command runner, and part travelling helper bot. Thanks for letting me drop by.</td><td>The bot will introduce itself</td><td>Yes</td><td>No</td><td>10 s</td><td>28/03/2026 01:20</td><td></td></tr>
+<tr><td><code>!slap</code></td><td>code</td><td>someuser slaps anotheruser with a dramatic slap!</td><td>Slaps someone with a random style of slap.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
+<tr><td><code>!time</code></td><td>database</td><td>The time in {place:arg:0} is {time:arg:0|h:mm tt} - ({timezoneid:arg:0})</td><td>Gets the time from any place in the world</td><td>Yes</td><td>No</td><td>1 s</td><td>28/03/2026 16:11</td><td></td></tr>
+<tr><td><code>!wherewasi</code></td><td>code</td><td>Recent stops: #a (playful), #b (chaotic)</td><td>Lists the bot&#39;s most recent channel visits.</td><td>Yes</td><td>No</td><td>0.5 s</td><td>—</td><td></td></tr>
 </tbody></table>
+</div>
+</section>
 </body></html>
